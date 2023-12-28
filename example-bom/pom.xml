@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.example</groupId>
+        <artifactId>maven-bom-examples</artifactId>
+        <version>${revision}</version>
+    </parent>
+    <packaging>pom</packaging>
+    <artifactId>example-bom</artifactId>
+
+    <properties>
+        <mysql.connector.java.version>8.0.33</mysql.connector.java.version>
+        <lingxi.cas.starter.version>1.1.4-RELEASE</lingxi.cas.starter.version>
+        <commons.math3.version>3.6.1</commons.math3.version>
+        <jsqlparser.version>4.3</jsqlparser.version>
+        <antlr4.runtime.version>4.7.2</antlr4.runtime.version>
+        <beetl.version>3.1.8.RELEASE</beetl.version>
+
+        <java.version>1.8</java.version>
+        <java.compiler>8</java.compiler>
+        <maven.compiler.plugin.version>3.8.1</maven.compiler.plugin.version>
+        <file_encoding>UTF-8</file_encoding>
+        <maven.compiler.source>${java.compiler}</maven.compiler.source>
+        <maven.compiler.target>${java.compiler}</maven.compiler.target>
+        <java_source_version>${java.version}</java_source_version>
+        <java_target_version>${java.version}</java_target_version>
+        <project.build.sourceEncoding>${file_encoding}</project.build.sourceEncoding>
+        <project.build.sourceEncoding>${file_encoding}</project.build.sourceEncoding>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql.connector.java.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.qihoo.finance.lingxi</groupId>
+                <artifactId>lingxi-cas-starter</artifactId>
+                <version>${lingxi.cas.starter.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-math3</artifactId>
+                <version>${commons.math3.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.jsqlparser</groupId>
+                <artifactId>jsqlparser</artifactId>
+                <version>${jsqlparser.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.antlr</groupId>
+                <artifactId>antlr4-runtime</artifactId>
+                <version>${antlr4.runtime.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.ibeetl</groupId>
+                <artifactId>beetl</artifactId>
+                <version>${beetl.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>${maven.compiler.plugin.version}</version>
+                    <configuration>
+                        <source>${maven.compiler.source}</source>
+                        <target>${maven.compiler.target}</target>
+                        <encoding>${file_encoding}</encoding>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+
+</project>
