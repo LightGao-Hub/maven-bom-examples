@@ -35,7 +35,7 @@
   <version>1.0.0</version>
   <type>pom</type>
   <scope>import</scope>
-</dependency
+</dependency>
 ```
 
 Spring Boot BOM（Bill of Materials，依赖关系管理）的优势在于，它不仅集中管理依赖版本，还允许其他项目通过引用 Spring Boot BOM 来继承其依赖版本管理的功能。换句话说，其他项目可以直接引入 Spring Boot BOM，继承其所管理的依赖版本，而无需单独指定每个依赖的版本。
